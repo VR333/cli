@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routes.module';
+import { HttpModule } from '@angular/http';
 
 import { CalculatorModule } from './modules/calculator/app.module';
 import { GoogleDistanceModule } from './modules/GoogleDistance/app.module';
@@ -18,7 +19,8 @@ import { HomeComponent }   from './home/app.component';
     BrowserModule,
     AppRoutingModule,
     CalculatorModule,
-    GoogleDistanceModule
+    GoogleDistanceModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
