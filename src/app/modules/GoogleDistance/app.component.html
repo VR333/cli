@@ -1,0 +1,12 @@
+<h1>Find out distance between two points!</h1>
+<input class='place-input' [(ngModel)]="origins" placeholder='origins'/>
+<input class='place-input' [(ngModel)]="destinations" placeholder='destination'/>
+<button (click)='countDistance()'>Count</button>
+<div>
+	Distance from
+	<strong>{{origins}}</strong>
+	to <strong>{{destinations}}</strong>
+	is <strong>{{distance}}</strong>
+</div>
+
+<!-- ng-map-autocomplete -->
