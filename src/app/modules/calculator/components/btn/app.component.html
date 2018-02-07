@@ -1,0 +1,7 @@
+<div class="btn {{type}}"
+	(click)="handleClick()">
+	{{value}}
+	<span *ngIf='value === "M+"' class="tooltiptext">Memory add</span>
+	<span *ngIf='value === "M-"' class="tooltiptext">Memory subtract</span>
+  <span *ngIf='value === "MS"' class="tooltiptext">Memory store</span>
+</div>

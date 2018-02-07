@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'calculator',
+  selector: 'header',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class CalculatorComponent { }
+export class HeaderComponent { }

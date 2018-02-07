@@ -1,0 +1,74 @@
+$menu-background-color: #ededed;
+$menu-options-hover-background-color: #DEDEDE;
+$active-option-background-color: #7DBBEA;
+$active-option-hover-background-color: #73b0e2;
+
+:host.move-left {
+    left: -250px;
+}
+
+:host.move-right {
+    left: 0px;
+}
+
+:host {
+    background-color: $menu-background-color;
+    width: 250px;
+    position: absolute;
+    z-index: 1;
+    transition: left .2s;
+
+    .menu-items {
+        height: 450px;
+        overflow: auto;
+        list-style-type: none;
+
+        li.roomless {
+            margin-left: 65px;
+            line-height: 48px;
+            font-size: 20px;
+            font-weight: bold;
+         }
+
+         li.title {
+             font-weight: bold;
+             font-size: 20px;
+             line-height: 40px;
+             padding-left: 44px;
+         }
+
+         li.version {
+             line-height: 51px;
+             padding-left: 65px;
+             &:hover {
+                 background-color: $menu-options-hover-background-color;
+             }
+         }
+
+         li.active {
+             background-color: $active-option-background-color;
+             &:hover {
+                 background-color: $active-option-hover-background-color;
+             }
+         }
+    }
+
+    .separator {
+        margin: auto;
+        margin-top: 5px;
+        width: 90%;
+    }
+
+    .about {
+          font-size: 18px;
+          line-height: 51px;
+          padding-left: 14px;
+          &:hover {
+              background-color: $menu-options-hover-background-color;
+          }
+
+          .info {
+              margin-right: 23px;
+          }
+    }
+}

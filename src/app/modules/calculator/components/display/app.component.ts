@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'calculator',
+  selector: 'display',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class CalculatorComponent { }
+export class DisplayComponent {
+    topScreen = 'lol';
+    botScreen = 'lol';
+}
