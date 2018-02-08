@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'menu',
@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class MenuComponent {
-    @Input('active') active: string ;
+    @Input('active') active: string;
+    @Output() activeChange = new EventEmitter();
+    
     list = [
         {
             name: 'Calculator',
@@ -88,5 +90,6 @@ export class MenuComponent {
 
     makeActiveTab = (item) => {
         this.active = item;
+        this.activeChange.emit(this.active);
     };
 }
