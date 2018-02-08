@@ -1,7 +1,7 @@
 <ul class='menu-items'>
     <li *ngFor="let item of list"
+        [class]="item.type"
         [class.active]="item.name === active"
-        class="{{item.type}}"
         (click)='makeActiveTab(item.name)'>
         {{item.name}}
     </li>

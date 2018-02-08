@@ -1,5 +1,13 @@
-<div class="btn {{type}}"
-	(click)="handleClick()">
+<div [class]='type'
+	class="btn"
+	(click)="handleClick()"
+	[ngClass]="{'m-btn': type === 'memory',
+			'input-btn': type !== 'memory',
+			'multiple': value === '✕',
+	 		'module': value === '%',
+			'equil operator': value === '=',
+			'font-size30': value === '.',
+			'tooltip': tooltip}">
 	{{value}}
 	<span *ngIf='value === "M+"' class="tooltiptext">Memory add</span>
 	<span *ngIf='value === "M-"' class="tooltiptext">Memory subtract</span>

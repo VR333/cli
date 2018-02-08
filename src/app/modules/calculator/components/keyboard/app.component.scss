@@ -6,6 +6,6 @@ $keyboard-separator-border-color: rgba(199,199,199,0.4);
      .btn-separator {
          width: 100%;
          border-color: $keyboard-separator-border-color;
-         margin-bottom: -1px;
-     }
+         margin: -1px 0;
+    }
  }

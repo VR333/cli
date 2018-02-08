@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CalculatorService } from './../../services/CalculatorService';
 
 @Component({
   selector: 'btn  ',
@@ -6,7 +7,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class BtnComponent {
-    @Input('type') type: string ;
-    @Input('value') value: string ;
-    @Input('tooltip') tooltip: string ;
+    constructor(private calculate: CalculatorService) {}
+    @Input('type') type: string;
+    @Input('value') value: string;
+    @Input('tooltip') tooltip: string;
+
+    handleClick() {
+      this.calculate.btnClick(this.type, this.value);
+    }
 }

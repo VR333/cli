@@ -3,20 +3,20 @@ $menu-options-hover-background-color: #DEDEDE;
 $active-option-background-color: #7DBBEA;
 $active-option-hover-background-color: #73b0e2;
 
-:host.move-left {
-    left: -250px;
-}
-
-:host.move-right {
-    left: 0px;
-}
-
 :host {
     background-color: $menu-background-color;
     width: 250px;
     position: absolute;
     z-index: 1;
     transition: left .2s;
+
+    &.move-left {
+        left: -250px;
+    }
+
+    &.move-right {
+        left: 0px;
+    }
 
     .menu-items {
         height: 450px;

@@ -1,0 +1,17 @@
+.top-navigation {
+	background-color: #6363ce;
+  margin-bottom: 20px;
+
+	.option {
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+		display: inline-block;
+		color: #fff;
+		text-decoration: none;
+
+		&:hover {
+			background-color: blue;
+		}
+	}
+}

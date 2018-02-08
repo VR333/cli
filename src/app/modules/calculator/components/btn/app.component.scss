@@ -30,20 +30,18 @@ $tooltiptext-background-color: $disabled-btn-text-color;
            outline: none;
         }
     }
-}
 
-.m-buttons {
-    .btn {
-        width: 16.5%;
-        height: 29px;
-        color: $disabled-btn-text-color;
-        font-size: 12px;
-        &:hover {
-           background-color: $m-btn-disabled-hover;
-        }
+    div.m-btn {
+      width: 16.5%;
+      height: 29px;
+      color: $disabled-btn-text-color;
+      font-size: 12px;
+      &:hover {
+         background-color: $m-btn-disabled-hover;
+      }
     }
 
-    .tooltip {
+    div.tooltip {
        position: relative;
        color: $primary-text-color;
        &:hover {
@@ -72,39 +70,39 @@ $tooltiptext-background-color: $disabled-btn-text-color;
            opacity: 0;
         }
     }
-}
 
-.input-buttons {
-    .number {
-        font-weight: bold;
-        font-size: 24px;
-    }
+    div.input-btn {
+      &.number {
+          font-weight: bold;
+          font-size: 24px;
+      }
 
-    .operator {
-        font-size: 30px;
-        &:hover {
-            color: $operator-text-hover;
-        }
-    }
+      &.operator {
+          font-size: 30px;
+          &:hover {
+              color: $operator-text-hover;
+          }
+      }
 
-    .module {
-         font-size: 18px;
-         &:hover {
-              color: black;
-         }
-    }
+      &.module {
+           font-size: 18px;
+           &:hover {
+                color: black;
+           }
+      }
 
-    .multiple {
-        font-size: 18px;
-    }
+      &.multiple {
+          font-size: 18px;
+      }
 
-    .equil {
-        &:hover {
-            background-color: $equil-btn-hover;
-        }
-    }
+      &.equil {
+          &:hover {
+              background-color: $equil-btn-hover;
+          }
+      }
 
-    .font-size30 {
-         font-size: 30px;
-    }
+      &.font-size30 {
+           font-size: 30px;
+      }
+  }
 }

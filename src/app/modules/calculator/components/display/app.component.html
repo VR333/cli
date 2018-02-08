@@ -1,5 +1,13 @@
-<h1 class='screen top-screen'>{{topScreen}}</h1>
+<h1 class='screen top-screen'>{{calculate.topScreen}}</h1>
 
-<h1 class='screen bot-screen'>
-	{{botScreen}}
+<h1 class='screen bot-screen'
+		[ngClass]= "{'font-size46': calculate.botScreen.length == 10,
+				'font-size42': calculate.botScreen.length == 11,
+				'font-size38': calculate.botScreen.length == 12,
+				'font-size36': calculate.botScreen.length == 13,
+				'font-size34': calculate.botScreen.length == 14,
+				'font-size32': calculate.botScreen.length == 15,
+				'font-size30': calculate.botScreen.length == 16,
+				'font-size27': calculate.botScreen.length >= 17}">
+	{{calculate.botScreen}}
 </h1>

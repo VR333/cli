@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalculatorService } from './../../services/CalculatorService';
 
 @Component({
   selector: 'display',
@@ -6,6 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class DisplayComponent {
-    topScreen = 'lol';
-    botScreen = 'lol';
+    constructor(private calculate: CalculatorService) {}
 }
