@@ -1,8 +1,6 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
-
 import { GoogleDistanceComponent } from './modules/GoogleDistance/app.component';
 import { CalculatorComponent } from './modules/calculator/app.component';
 import { HomeComponent }   from './home/app.component';
