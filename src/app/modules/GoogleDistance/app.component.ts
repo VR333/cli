@@ -12,7 +12,7 @@ import { } from 'googlemaps';
 export class GoogleDistanceComponent implements OnInit {
     loading = false;
     distance : string;
-    
+
     @ViewChild("origins") origins: ElementRef;
     @ViewChild("destinations") destinations: ElementRef;
 

@@ -8,6 +8,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class MenuComponent {
     @Input('active') active: string;
     @Output() activeChange = new EventEmitter();
+
+    makeActiveTab = (item) => {
+        this.active = item;
+        this.activeChange.emit(this.active);
+    };
     
     list = [
         {
@@ -87,9 +92,4 @@ export class MenuComponent {
             type: 'version'
         }
     ];
-
-    makeActiveTab = (item) => {
-        this.active = item;
-        this.activeChange.emit(this.active);
-    };
 }
