@@ -11,6 +11,8 @@ import { } from 'googlemaps';
 })
 export class GoogleDistanceComponent implements OnInit {
     loading = false;
+    distance : string;
+    
     @ViewChild("origins") origins: ElementRef;
     @ViewChild("destinations") destinations: ElementRef;
 
@@ -46,7 +48,10 @@ export class GoogleDistanceComponent implements OnInit {
         if ( this.origins.nativeElement.value && this.destinations.nativeElement.value ) {
             this.loading = true;
             this.googleApi.search(this.origins.nativeElement.value, this.destinations.nativeElement.value)
-                .then( () => this.loading = false );
+                .then( () => {
+                    this.loading = false;
+                    this.distance = this.googleApi.distance;
+                });
         } else {
             alert('Sorry, origins and destinations must be set.. :( ')
         }
