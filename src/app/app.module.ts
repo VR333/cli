@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routes.module';
-import { HttpModule } from '@angular/http';
+import { Http } from '@angular/http';
 
 import { CalculatorModule } from './modules/calculator/app.module';
 import { GoogleDistanceModule } from './modules/GoogleDistance/app.module';
@@ -21,7 +21,7 @@ import { HomeComponent }   from './home/app.component';
     AppRoutingModule,
     CalculatorModule,
     GoogleDistanceModule,
-    HttpModule,
+    Http,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyBsMeetk8vb5UFAtlZ3A6agbV-Nr8q-UV4",
       libraries: ["places"]
