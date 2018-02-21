@@ -10,11 +10,13 @@ import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent }   from './home/app.component';
+import { Error404Component }   from './error404/app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

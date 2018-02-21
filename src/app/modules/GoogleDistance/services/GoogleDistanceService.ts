@@ -1,6 +1,7 @@
 import { Injectable} from '@angular/core';
 import { Http, Response} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+// import { Observable } from 'rxjs';
 
 @Injectable()
 export class GoogleDistanceService {
@@ -10,12 +11,21 @@ export class GoogleDistanceService {
   constructor (private http: Http) {}
 
   search(origin: string, destination: string) {
-      let promise = new Promise((resolve, reject) => {
-          let origins = encodeURI(origin);
-          let destinations = encodeURI(destination);
-          let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-          let url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${origins}&destinations=${destinations}&key=${this.key}`;
+      let origins = encodeURI(origin);
+      let destinations = encodeURI(destination);
+      let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+      let url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${origins}&destinations=${destinations}&key=${this.key}`;
 
+      // need to find out how to use multiple subscribe usage
+      // let x = this.http.get(proxyUrl + url)
+      //   .subscribe(
+      //       r => console.dir(r.json()),
+      //       e => console.log('good luck')
+      //   ).subscribe(
+      //       a => alert(a)
+      //   )
+
+      let promise = new Promise((resolve, reject) => {
           this.http.get(proxyUrl + url)
               .toPromise()
               .then(
